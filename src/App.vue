@@ -12,12 +12,12 @@
     </div>
     <div class="studentGrid">
       <div v-for="(student, index) in students" :key="index" class="student-card">
-        <img :src="student.profilePicture" :alt="student.name" class="student-photo" />
+        <img v-bind:src="student.profilePicture" v-bind:alt="student.name" class="student-photo" />
         <h2 class="student-name">{{ student.fullName }}</h2>
-        <p class="student-age">Description: {{ student.description }}</p>
-        <p class="student-age">Phone: {{ student.phoneNumber }}</p>
-        <p class="student-age">Country: {{ student.country }}</p>
-        <p class="student-age">Address: {{ student.address }}</p>
+        <p class="student-age"><b>Description:</b> {{ student.description }}</p>
+        <p class="student-age"><b>Phone: </b>{{ student.phoneNumber }}</p>
+        <p class="student-age"><b>Country:</b> {{ student.country }}</p>
+        <p class="student-age"><b>Address:</b> {{ student.address }}</p>
         <button @click="deleteStudent(index)">Delete</button>
       </div>
     </div>
